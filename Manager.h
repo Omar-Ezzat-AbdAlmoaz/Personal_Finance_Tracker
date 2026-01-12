@@ -144,6 +144,10 @@ public:
             cout << "Source cannot be empty.\n";
             return false;
         }
+        if (source.find(',') != string::npos) {
+            cout << "Invalid input: ',' is not allowed.\n";
+            return false;
+        }
 
         return true;
     }
@@ -152,6 +156,11 @@ public:
         if (category.empty())
         {
             cout << "Category cannot be empty.\n";
+            return false;
+        }
+
+        if (category.find(',') != string::npos) {
+            cout << "Invalid input: ',' is not allowed.\n";
             return false;
         }
 

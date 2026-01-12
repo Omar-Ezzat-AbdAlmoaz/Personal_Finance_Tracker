@@ -2,7 +2,8 @@
 #include "Expanse_Management/ExpanseManager.h"
 #include "Budget_Management/BudgetManager.h"
 #include "Report_Management/ReportManager.h"
-#include "InputValidator.h"
+#include "Utilies/InputValidator.h"
+#include "Utilies/FileManager.h"
 
 #include <iostream>
 #include <limits>
@@ -62,7 +63,9 @@ void pause()
 
 int main()
 {
-    Manager manager = Manager();
+    Manager manager = Manager();  
+    FileManager::loadAll(manager);
+
     IncomeManager incomeMgr = IncomeManager(manager);
     ExpanseManager expanseMgr = ExpanseManager(manager);
     BudgetManager budgetMgr = BudgetManager(manager);
@@ -265,6 +268,7 @@ int main()
             cout << "Please Enter Valid Choice From 1 To 13!\n";
         }
     }
+    FileManager::saveAll(manager);
 
     return 0;
 }
