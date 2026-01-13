@@ -122,7 +122,7 @@ Maintainability: Modular, clean, and well-structured codebase
 
 Clone the repository:
 
-git clone https://github.com/your-username/personal-finance-tracker.git
+git clone https://github.com/Omar-Ezzat-AbdAlmoaz/Personal_Finance_Tracker
 
 
 Compile the project:
